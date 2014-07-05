@@ -1,0 +1,393 @@
+/*******Resets*******/
+*{
+    margin: 0;
+    padding: 0; 
+}
+
+
+/******Defaults******/
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #FFF;
+}
+
+.nav{
+    position: absolute;
+    width: 100%;   
+}    
+
+p{
+    font-family: Century Gothic, sans-serif;
+}
+
+button{
+    border: none;
+    border-radius: 10px;
+}
+/*******Components*******/
+aside{
+    float: right;
+    margin-right: 65px;
+    min-height: 100px;
+    min-width: 120px;
+}
+
+button{
+    width: 100px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFF;
+    min-height: 30px;
+    background-color: #000;
+    margin-top: 5px;
+}
+
+h2{
+    font-family: 'Pacifico', cursive;
+    padding: 20px;
+    border-bottom: 1px solid #000;
+    background-color: #DEDEDE;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color: #000;
+}
+
+h3{
+    font-family: 'Pacifico', cursive;
+    color: #000;
+    font-size: 24px;
+}
+
+.form{
+    min-height: 270px;
+    width: 490px;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: rgba(255,255,255, .7);
+    border: 4px solid black;
+    text-align: center;
+    margin: auto;
+    margin-top: 170px;
+}
+
+label{
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+    color: #000;
+}
+input{
+    height: 35px;
+    width: 300px;
+    border-radius: 5px;
+    margin: 13px;
+    background-color: #FFF;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+textarea{
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    width: 300px;
+}
+
+input[type=text]:hover {
+        background-color:#E6C5BA;
+        border-color:#949194;
+}
+
+input[type=password]:hover {
+        background-color:#E6C5BA;
+        border-color:#949194;
+}
+textarea:hover {
+        background-color:#E6C5BA;
+        border-color:#949194;
+}
+
+.login, .signup, .logout, .home{
+    float: right;
+    height: 35px;
+    margin-right: 10px;
+ }
+/*******Structure*******/
+.cookbook{
+    color: #FFF;
+    background-color: #E6C5BA;
+}
+
+.logout {
+    background-color: #000;
+    color: #FFF;
+    height: 30px;
+}
+
+.bar, .bottombar{
+    background-color: #FFF;
+    width: 960px;
+    height: 2px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.bottombar{
+    margin-bottom: 40px;
+    height: 3px;
+}
+
+.formlogin, .formregister{
+    display: none;
+    min-height: 270px;
+    width: 500px;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: rgba(255,255,255, 1);
+    text-align: center;
+    margin: auto;
+    margin-top: 170px;
+    z-index: 100;
+}
+
+.buttons{
+    padding: 17px;
+}
+.buttons button{
+    background-color: #000;
+    color: #FFF;
+    height: 30px;
+}
+.overlay{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(0,0,0, 0.7);
+    padding: 1px;
+}
+
+
+.login{
+    background-color: #E6C5BA;
+ }
+
+.signup{
+    background-color: #000;
+    color: #FFF;
+ }
+
+ /*FIRST*/
+ .bkimg{
+    background-image: url('imgs/bakeimg.jpg');
+    padding: 1px;
+    background-size: cover;
+ }
+.arrow{
+    width: 140px;
+    height: 140px;
+    margin: auto;
+    padding-top: 50px;
+ }
+.icons{
+    text-align: center;
+    margin: 15px;
+}
+
+.icons img{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    margin: 10px;
+ }
+
+.titles{
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    color: #FFF;
+    text-shadow:
+       2px 2px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+ }
+
+.titles span:first-child{
+    margin-left: 10px;
+ }
+/*.titles span:nth-child(6){
+     margin-left: -10px;
+}*/
+.titles span{
+    padding: 5px;
+    margin-left: 34px;   
+}
+
+.headTitle{
+    font-size: 30px;
+    padding-top: 45px;
+    color: #000;
+    text-shadow:
+       2px 2px 0 #FFF,
+     -1px -1px 0 #FFF,  
+      1px -1px 0 #FFF,
+      -1px 1px 0 #FFF,
+       1px 1px 0 #FFF;
+}
+
+.subTitle p{
+    color: #000;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 16px;
+    line-height: 50px;
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+
+div.banner{
+    width: 800px;
+    height: 250px;
+    margin: auto;
+    margin-top: 60px;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/*FOOTER*/
+.footer{
+    background-color: #111;
+    min-height: 150px;
+    text-align: center;
+ }
+.footer span{
+    display: inline-block;
+    margin-top: 25px;
+ }
+.heart{
+    color: #e75b39;
+ }
+
+
+/*CREATE*/
+.mainCook .titles{
+    font-size: 30px;
+}
+
+.mainCreate{
+    overflow: hidden;
+    background-color: rgba(255,255,255, 0.5);
+    height: 100%;
+}
+
+.mainCreate .titles{
+    font-size: 30px;
+}
+.createrecipe{
+    display: inline-block;
+    margin-left: 640px;
+    margin-top: 40px;
+    float: left;
+}
+.recipeAdd{
+    background-color: rgba(255,255,255, 0.7);
+    border-radius: 7px;
+    min-height: 200px;
+}
+.recipe{
+    background-color: pink;
+}
+
+.recipe div{
+    width: 140px;
+    height: 140px;
+    background-color: black;
+    margin: auto;
+    display: inline-block;
+    overflow: hidden;
+}
+.second{
+    background-color: #DEDEDE;
+    height: 90%;
+}
+
+.iconC img{
+    height: 75px;
+    width: 75px;
+}
+.iconC span{
+    color: #000;
+}
+
+ /*COOKBOOK*/
+.mainCook{
+    overflow: hidden;
+    background-color: #DEDEDE;
+    height: 100%;
+}
+.cook{
+    overflow: hidden;
+}
+.cook div{
+    width: 300px;
+    min-height: 200px;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 5px;
+ }
+
+.search{
+   width: 150px;
+   height: 30px; 
+   background-color: gray;
+   float: right;
+}
+
+.mainContainer .cook{
+    width: 960px;
+    margin-left: 400px;
+    float: left;
+    display: inline-block;
+}
+.mainContainer aside button{
+    background-color: #000;
+}
+
+.cook img{
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+    margin: 10px;
+ }
+
+.page{
+    float: left;  
+}
+
+.page span{
+    color: #000;
+    font-size: 10px;
+}
+
+.page p{
+    color: #000;
+    font-size: 24px;
+    margin: 6px;
+    text-align: center;
+}
+.page button{
+   margin-left: 100px;
+}
