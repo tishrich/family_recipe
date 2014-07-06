@@ -100,32 +100,32 @@ if($_POST){
         </div>
     </div>
     <!-- NAVIGATION HEADER -->
-	<div class="nav">
-	    <button class="login">Log In</button>
-	    <button class="signup"><span>Sign Up</span></button>
-	</div>   
-	<!-- First Section/Imgs/Icons -->
 	<div class="bkimg">	
-	<div class="bar"></div>
-		<div class="banner"><img src="imgs/banner_bk.png" alt=""></div>
-		<div class="icons">
-			<img  src="imgs/bake_a.png" alt="">
-			<img  src="imgs/cal.png" alt="">
-			<img  src="imgs/heart.png" alt="">
-			<img  src="imgs/list.png" alt="">
-			<img  src="imgs/lock.png" alt="">
-			<img  src="imgs/share.png" alt="">
-		</div>	
-        <div class="titles">
-            <span>Recipes</span>
-            <span>Calendar</span>
-            <span>Love</span>
-            <span>Shopping List</span>
-            <span>Secret</span>
-            <span>Share</span>
-        </div>
-	<div class="arrow"><img src="imgs/arrow.png" alt=""></div>
-	<div class="bar bottombar"></div>
+        <div class="nav">
+            <button class="login">Log In</button>
+            <button class="signup"><span>Sign Up</span></button>
+        </div>   
+    <!-- First Section/Imgs/Icons -->
+    	<div class="bar"></div>
+    		<div class="banner"><img src="imgs/banner_bk.png" alt=""></div>
+    		<div class="icons">
+    			<img  src="imgs/bake_a.png" alt="">
+    			<img  src="imgs/cal.png" alt="">
+    			<img  src="imgs/heart.png" alt="">
+    			<img  src="imgs/list.png" alt="">
+    			<img  src="imgs/lock.png" alt="">
+    			<img  src="imgs/share.png" alt="">
+    		</div>	
+            <div class="titles">
+                <span>Recipes</span>
+                <span>Calendar</span>
+                <span>Love</span>
+                <span>Shopping List</span>
+                <span>Secret</span>
+                <span>Share</span>
+            </div>
+    	<div class="arrow"><img src="imgs/arrow.png" alt=""></div>
+    	<div class="bar bottombar"></div>
 	</div>
 
     <!-- Second -->

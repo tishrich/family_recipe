@@ -133,12 +133,13 @@ textarea:hover {
     width: 960px;
     height: 2px;
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .bottombar{
-    margin-bottom: 40px;
+    margin-bottom: 100px;
     height: 3px;
+
 }
 
 .formlogin, .formregister{
@@ -189,6 +190,7 @@ textarea:hover {
     background-image: url('imgs/bakeimg.jpg');
     padding: 1px;
     background-size: cover;
+    height: 100%;
  }
 .arrow{
     width: 140px;
@@ -297,10 +299,8 @@ a{
     font-size: 30px;
 }
 .createrecipe{
-    display: inline-block;
-    margin-left: 640px;
-    margin-top: 40px;
-    float: left;
+    width: 460px;
+    margin: auto;
 }
 .recipeAdd{
     background-color: rgba(255,255,255, 0.7);
@@ -333,6 +333,12 @@ a{
 }
 
  /*COOKBOOK*/
+ .nav .welcome{ /*welcome message in nav*/
+    font-family: 'Pacifico', cursive;
+    color: green;
+    font-size: 20px;
+    margin-left: 30px;
+}
 .mainCook{
     overflow: hidden;
     background-color: #DEDEDE;
@@ -356,11 +362,9 @@ a{
    float: right;
 }
 
-.mainContainer .cook{
+.cook{
     width: 960px;
-    margin-left: 400px;
-    float: left;
-    display: inline-block;
+    margin: auto;
 }
 .mainContainer aside button{
     background-color: #000;
@@ -390,4 +394,43 @@ a{
 }
 .page button{
    margin-left: 100px;
+}
+
+/*VIEW*/
+.mainView{
+    width: 500px;
+    border: 2px solid black;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.viewContent{
+
+}
+
+.viewContent span{
+    color: #000;
+}
+
+/*LOGOUT*/
+.exit{
+    margin: auto;
+    width: 500px;
+    background-color: #EEE;
+    border-radius: 5px;
+    margin-top: 35px;
+    overflow: hidden;
+    border: 30px solid gray;
+}
+
+.exit h3{
+    font-family: 'Oxygen', sans-serif;
+    font-size: 20px;
+    color: #000;
+
+}
+
+.exit button{
+    float: right;
+    margin: 6px;
 }

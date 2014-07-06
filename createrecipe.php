@@ -5,7 +5,6 @@ include_once("db.php");
 include_once("createrecipedb.php");
 
  $db = new DB();
-print_r($_POST);
 if(isset($_POST['submit'])){  
     $recipe = [
         'title' => addslashes($_POST['title']),
@@ -59,13 +58,11 @@ if(isset($_POST['submit'])){
                 </div>
             </aside> 
 
-            <aside>
+           <!--  <aside>
                 <div class="recipeAdd">
                     <h3>Recipes Added To Cookbook</h3>
                 </div>
-            </aside>   
+            </aside>    -->
         </div>      
     </main> 
 </div>
-
-apostrophes in text ruins 

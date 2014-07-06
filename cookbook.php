@@ -1,5 +1,15 @@
 <?php
-
+error_reporting(E_ALL);
+ini_set('display_errors', 'on');
+session_start();
+include_once("user.php");
+if (!is_numeric($_SESSION['user_id'])) {
+  print "You are not logged in";
+  die();
+}
+$user_id = $_SESSION['user_id'];
+$user = getUserById($user_id);
+$first_name= $user['first_name'];
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +27,10 @@
 <body>
     <main class="mainCook">
         <div class="nav">
-            <button class="logout">Log Out</button>
+            <span class="welcome">Welcome <?php echo $first_name; ?>! What will you cook today?</span>
+            <a href="logout.php">    
+                <button class="logout">Log Out</button>
+            </a>    
             <a href="index.php">    
                 <button class="home">Home</button>
             </a>
