@@ -36,7 +36,7 @@ include_once("db.php");
 <head>
     <meta charset="UTF-8">
     <title>View</title>
-    <!-- <link rel="stylesheet" href="index.css"> -->
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="animate.css">
     <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Oxygen:300' rel='stylesheet' type='text/css'>

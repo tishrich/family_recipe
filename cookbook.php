@@ -7,7 +7,6 @@ $db = new DB();
 
 if (!is_numeric($_SESSION['user_id'])) {
   print "You are not logged in";
-  die();
 }
 $user_id = $_SESSION['user_id'];
 $user = getUserById($user_id);
@@ -48,7 +47,6 @@ $results = $db->execute($sql);
                 <button class="home">Home</button>
             </a>
                 <button class="newrecipe">Create New</button>
-      <?php include ("view.php");?>
         </div>
         <div class="mainContainer">
         <div class="bar"></div>
@@ -59,47 +57,33 @@ $results = $db->execute($sql);
                 
                 while($row = $results->fetch_assoc()) {            
                 ?>
+                <div class="recipe-container">
+                    <div class='page'>
+                        <p><?= $row['title']; ?></p>
+                        <span><?= $row['time']; ?></span>
+                        <span><?= $row['ingredients']; ?></span>
+                        <img src="imgs/<?= $row['img']; ?>.jpg" alt="">
+                        <!-- <a href="<?=$row['recipe_id']; ?>"> -->
+                            <button class="view">View</button>
+                        <!-- </a>    -->
+                    </div>
+                <!-- INCLUDE VIEW.PHP HERE     -->
+                     <?php include("view.php"); ?>
 
-                <div class='page'>
-                    <p><?= $row['title'] ?></p>
-                    <span><?= $row['time'] ?></span>
-                    <span><?= $row['ingredients'] ?></span>
-                    <img src="imgs/<?= $row['img'] ?>.jpg" alt="">
-                    <a href="<?=$row['recipe_id'] ?>">
-                        <button class="view">View</button>
-                    </a>   
                 </div>
+                    
+                
 
                 <?php 
-
                 } 
-
                 ?>
 
-                 <div class="details">
-                        <h2 class="titles"><?= $row['title'] ?></h2>
-                        <span>Time:</span>
-                        <div>
-                            <?= $row['time'] ?>
-                        </div>    
-                        <span>Ingredients:</span>
-                        <div>
-                            <?= $row['ingredients'] ?>
-                        </div>  
-                        <span>Directions:</span>
-                        <div>
-                            <?= $row['directions'] ?>
-                        </div>  
-                        <div class="buttons">
-                            <button class="edit">Edit</button>
-                            <button>Ok</button>
-                        </div>    
-                    </div>    
-                
             </div>  
+
         </div>
    </main>
    <?php include("createrecipe.php"); ?>
+
    
 </body>
 </html>

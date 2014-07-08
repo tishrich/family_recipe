@@ -5,7 +5,7 @@ include_once("db.php");
 // include_once("createrecipedb.php");
 include_once("user.php");
 
- $db = new DB();
+$db = new DB();
 if(isset($_POST['submit']) && isset($_SESSION['user_id'])){  
     $recipe = [
         'user_id' => intval($_SESSION['user_id']),
@@ -18,7 +18,7 @@ if(isset($_POST['submit']) && isset($_SESSION['user_id'])){
     $db->insert('recipe', $recipe);
      
 }else{
-    echo "didn't work";
+
 }
 
 ?>
@@ -28,7 +28,7 @@ if(isset($_POST['submit']) && isset($_SESSION['user_id'])){
         <div class="bar"></div> 
         <div class="mainContainer">
             <p class="titles">Create A Recipe</p>
-            <div class="form createrecipe">
+            <div class="form lightbox createrecipe">
                 <form action="" method="POST">
                     <h2> Add A Recipe</h2>
                     <label>Title:

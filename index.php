@@ -43,7 +43,7 @@ if($_POST){
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Recipe</title>
+	<title>My Family Recipes</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="animate.css">
     <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>

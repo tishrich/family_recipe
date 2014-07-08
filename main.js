@@ -43,10 +43,26 @@ $(function(){
             
      });
 
+    //  $('.view').on('click', function(){
+    //    $('.viewContent').show();
+    // });
+
+
     $('.view').on('click', function(){
-        var recipeId = $(this).parent();
-        $(this).parent().find('.details').show();
+         $(this).parents('.recipe-container').find('.viewContent').show();
     });
+
+    $('.close-lightbox').on('click', function(){
+        $(this).parents('.lightbox').hide();
+    });
+
+    //  $('.edit').on('click', function(){
+    //    $('.editRecipe').show();
+    // });
+    // $('.view').on('click', function(){
+    //     var recipeId = $(this).parent();
+    //     $(this).parent().find('.details').show();
+    // });
 
     
 // CS VALIDATION*********
