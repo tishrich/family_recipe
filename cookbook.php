@@ -3,6 +3,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 session_start();
 include_once("user.php");
+$db = new DB();
+
 if (!is_numeric($_SESSION['user_id'])) {
   print "You are not logged in";
   die();
@@ -10,6 +12,17 @@ if (!is_numeric($_SESSION['user_id'])) {
 $user_id = $_SESSION['user_id'];
 $user = getUserById($user_id);
 $first_name= $user['first_name'];
+
+
+
+$sql = "
+SELECT * 
+FROM recipe 
+WHERE user_id = {$_SESSION['user_id']}
+";
+
+$results = $db->execute($sql);
+
 ?>
 
 <!DOCTYPE html>
@@ -34,60 +47,60 @@ $first_name= $user['first_name'];
             <a href="index.php">    
                 <button class="home">Home</button>
             </a>
+                <button class="newrecipe">Create New</button>
+      <?php include ("view.php");?>
         </div>
         <div class="mainContainer">
         <div class="bar"></div>
         <p class="titles">Your Cookbook</p>
             <div class="cook">
-                <div class="page">
-                    <p>Bruschetta</p>
-                    <span>This is the short description where you describe what your recipe has in it and anything else you'd like to add.</span>
-                    <img src="imgs/basilaptzr.jpg" alt="">
-                    <button class="view">View</button>
+
+                <?php
+                
+                while($row = $results->fetch_assoc()) {            
+                ?>
+
+                <div class='page'>
+                    <p><?= $row['title'] ?></p>
+                    <span><?= $row['time'] ?></span>
+                    <span><?= $row['ingredients'] ?></span>
+                    <img src="imgs/<?= $row['img'] ?>.jpg" alt="">
+                    <a href="<?=$row['recipe_id'] ?>">
+                        <button class="view">View</button>
+                    </a>   
                 </div>
-                <div class="page">
-                    <p>Microgreens</p>
-                    <span>This is the short description where you describe what your recipe has in it and anything else you'd like to add.</span>
-                    <img src="imgs/microgreen.jpg" alt="">
-                    <button class="view">View</button>
-                </div>
-                <div class="page">
-                    <p>Spicy Habanero</p>
-                    <span>This is the short description where you describe what your recipe has in it and anything else you'd like to add.</span>
-                    <img src="imgs/redhabs.jpg" alt="">
-                    <button class="view">View</button>
-                </div>
-                <div class="page">
-                    <p>Microgreens</p>
-                    <span>This is the short description where you describe what your recipe has in it and anything else you'd like to add.</span>
-                    <img src="imgs/microgreen.jpg" alt="">
-                    <button class="view">View</button>
-                </div>
-                <div class="page">
-                    <p>Spicy Habanero</p>
-                    <span>This is the short description where you describe what your recipe has in it and anything else you'd like to add.</span>
-                    <img src="imgs/redhabs.jpg" alt="">
-                    <button class="view">View</button>
-                </div>
-                <div class="page">
-                    <p>Bruschetta</p>
-                    <span>This is the short description where you describe what your recipe has in it and anything else you'd like to add.</span>
-                    <img src="imgs/basilaptzr.jpg" alt="">
-                    <button class="view">View</button>
-                </div>
+
+                <?php 
+
+                } 
+
+                ?>
+
+                 <div class="details">
+                        <h2 class="titles"><?= $row['title'] ?></h2>
+                        <span>Time:</span>
+                        <div>
+                            <?= $row['time'] ?>
+                        </div>    
+                        <span>Ingredients:</span>
+                        <div>
+                            <?= $row['ingredients'] ?>
+                        </div>  
+                        <span>Directions:</span>
+                        <div>
+                            <?= $row['directions'] ?>
+                        </div>  
+                        <div class="buttons">
+                            <button class="edit">Edit</button>
+                            <button>Ok</button>
+                        </div>    
+                    </div>    
                 
             </div>  
-            <aside>
-                <!-- <a href="create.php"> -->
-                    <button class="newrecipe">Create New</button>
-                <!-- </a> -->
-            </aside>
         </div>
    </main>
-
-   <!-- "VIEW" IN COOKBOOK  -->
-
-<?php include("createrecipe.php"); ?>
+   <?php include("createrecipe.php"); ?>
    
 </body>
 </html>
+                    

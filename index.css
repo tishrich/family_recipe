@@ -111,7 +111,7 @@ textarea:hover {
         border-color:#949194;
 }
 
-.login, .signup, .logout, .home{
+.login, .signup, .logout, .home, .newrecipe{
     float: right;
     height: 35px;
     margin-right: 10px;
@@ -157,7 +157,7 @@ textarea:hover {
 
 .buttons{
     padding: 17px;
-}
+}y
 .buttons button{
     background-color: #000;
     color: #FFF;
@@ -169,7 +169,7 @@ textarea:hover {
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 200%;
     z-index: 1000;
     background-color: rgba(0,0,0, 0.7);
     padding: 1px;
@@ -285,6 +285,10 @@ a{
 
 
 /*CREATE*/
+
+.newrecipe{
+    background-color: green;
+}
 .mainCook .titles{
     font-size: 30px;
 }
@@ -342,7 +346,6 @@ a{
 .mainCook{
     overflow: hidden;
     background-color: #DEDEDE;
-    height: 100%;
 }
 .cook{
     overflow: hidden;
@@ -370,15 +373,21 @@ a{
     background-color: #000;
 }
 
-.cook img{
+.page img{
     width: 300px;
     height: 200px;
     display: inline-block;
-    margin: 10px;
+    border-radius: 5px 5px 0 0;
+    margin-top: 20px;
  }
 
 .page{
-    float: left;  
+    float: left; 
+    background-color: #FFF;
+    border-radius: 10px; 
+    -webkit-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.75);
 }
 
 .page span{
@@ -391,27 +400,47 @@ a{
     font-size: 24px;
     margin: 6px;
     text-align: center;
+    border-bottom: 1px solid #EEE
 }
 .page button{
    margin-left: 100px;
+   margin-bottom: 15px;
 }
 
+/*COOKBOOK VIEW*/
+.cook .details{
+    display: none;
+    width: 700px;
+    z-index: 1000;
+    background-color: #000;
+}
 /*VIEW*/
-.mainView{
-    width: 500px;
-    border: 2px solid black;
+.viewContent div{
+    min-width: 400px;s
+    border-bottom: 1px solid blue;
+    border-radius: 5px;
     margin: auto;
-    margin-top: 5%;
 }
 
+.viewContent div:hover{
+    background-color: #E6C5BA;
+}
 .viewContent{
-
+    min-width: 460px;
+    display: none;
+    z-index: 1000;
+    background-color: #FFF;
 }
 
-.viewContent span{
+.viewContent span, .viewContent p{
     color: #000;
+    text-align: left;
 }
 
+.blur{
+    height: 100%;
+    background-color: rgba(255,255,255, 0.7); ;
+}
 /*LOGOUT*/
 .exit{
     margin: auto;

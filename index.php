@@ -19,7 +19,7 @@ if($_POST){
         exit();
 
     }else{
-      // echo "username not found";   
+       // print "username not found";   
     }
 
   } else { 
@@ -32,7 +32,7 @@ if($_POST){
       if($user){
          array_push($errors, "username already exists");
       } else {
-        insertUser($firstName, $lastName, $email, $password);
+        insertuser($firstName, $lastName, $email, $password);
       }
     }
 }  
@@ -60,7 +60,7 @@ if($_POST){
                 <h2>Log In </h2>
                 <label>Email:
                 </label>
-                <input type="text" name="email"class="colorbg"><br>
+                <input type="text" name="email"><br>
                 <label>Password:
                 </label>
                 <input type="password" name="password"><br>
@@ -79,13 +79,13 @@ if($_POST){
                 <h2> Sign Up </h2>
                 <label>First Name:
                 </label>
-                <input type="text" class="colorbg" name="firstName" ><br>
+                <input type="text" name="firstName"><br>
                 <label>Last Name:
                 </label>
                 <input type="text" name="lastName"><br>
                 <label>Email:
                 </label>
-                <input type="text" name="email" class="colorbg" ><br>
+                <input type="text" name="email"><br>
                 <label>Password:
                 </label>
                 <input type="password" name="password"><br>

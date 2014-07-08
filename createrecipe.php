@@ -2,24 +2,24 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 include_once("db.php");
-include_once("createrecipedb.php");
+// include_once("createrecipedb.php");
+include_once("user.php");
 
  $db = new DB();
-if(isset($_POST['submit'])){  
+if(isset($_POST['submit']) && isset($_SESSION['user_id'])){  
     $recipe = [
+        'user_id' => intval($_SESSION['user_id']),
         'title' => addslashes($_POST['title']),
         'time' => addslashes($_POST['time']),
         'ingredients' => addslashes($_POST['ingredients']),
         'directions' => addslashes($_POST['directions'])
     ];
-
+    // if !empty($recipe)
     $db->insert('recipe', $recipe);
      
 }else{
     echo "didn't work";
 }
-
-
 
 ?>
 
@@ -57,12 +57,6 @@ if(isset($_POST['submit'])){
                     </a>    
                 </div>
             </aside> 
-
-           <!--  <aside>
-                <div class="recipeAdd">
-                    <h3>Recipes Added To Cookbook</h3>
-                </div>
-            </aside>    -->
         </div>      
     </main> 
 </div>

@@ -30,12 +30,27 @@ function getDirections($directions){
   return $results->fetch_assoc();
 }
 
-function insertRecipe($title, $time, $ingredients, $directions){
+function insertRecipe($user_id, $title, $time, $ingredients, $directions){
     $insertrecipe = "
-    INSERT INTO recipe(title, time, ingredients, directions) 
-    VALUES ('$title','$time','$ingredients', '$directions')
+    INSERT INTO recipe(user_id, title, time, ingredients, directions) 
+    VALUES ($user_id, '$title','$time','$ingredients', '$directions')
     ";
     $db = new DB();
     $db->execute($insertrecipe);
     
 }
+
+  function updateRecipe($table_name, $updaterecipe, $recipe_id) {
+
+    $update = "
+    UPDATE recipe 
+    SET title = '$updaterecipe['title']',
+        time = '$updaterecipe['time']',
+        ingredients = '$updaterecipe['ingredients']',
+        directions = '$updaterecipe['directions']',
+    WHERE recipe_id = $recipe_id
+    ";
+    $db = new DB();
+    $db->execute($update);
+  
+  }

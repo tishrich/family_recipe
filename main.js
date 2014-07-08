@@ -40,10 +40,15 @@ $(function(){
         $('.mainCreate').show();
         $('.overlay').show();
         $('.createrecipe').addClass('animated slideInDown');
-            console.log("slideInDown");
+            
      });
 
-        
+    $('.view').on('click', function(){
+        var recipeId = $(this).parent();
+        $(this).parent().find('.details').show();
+    });
+
+    
 // CS VALIDATION*********
 
      function checkLength(text, min, max){
